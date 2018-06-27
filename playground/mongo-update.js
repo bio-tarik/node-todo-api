@@ -11,9 +11,14 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
         text: 'Something to do'
     }, {
         $set: {
-            completed: false
+            completed: true
         }
+    }, {
+        returnOriginal: false
+    }).then((result) => {
+        console.log(result);
     });
 
+    
     client.close();
 });
