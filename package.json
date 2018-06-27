@@ -4,7 +4,8 @@
   "description": "A todo list api being created along with this tutorial: https://www.udemy.com/the-complete-nodejs-developer-course-2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "./node_modules/.bin/eslint ./**.js ."
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,14 @@
   },
   "homepage": "https://github.com/bio-tarik/node-todo-api#readme",
   "dependencies": {
-    "mongodb": "^3.0.10"
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0"
   }
 }
