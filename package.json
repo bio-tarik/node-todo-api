@@ -4,7 +4,9 @@
   "description": "A todo list api being created along with this tutorial: https://www.udemy.com/the-complete-nodejs-developer-course-2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "npm run check",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'",
     "check": "./node_modules/.bin/eslint ./**.js ."
   },
   "repository": {
@@ -28,6 +30,10 @@
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.10.0"
+    "eslint-plugin-react": "^7.10.0",
+    "expect": "^23.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
   }
 }

@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const { mongoose } = require('./db/mongoose');
+// const { mongoose } = require('./db/mongoose');
 const { Todo } = require('./models/todo');
-const { User } = require('./models/user');
+// const { User } = require('./models/user');
 
 const app = express();
 
@@ -24,3 +24,5 @@ app.post('/todos', (req, res) => {
 app.listen(3000, () => {
   console.log('Server up and runnig on port 3000');
 });
+
+module.exports = { app };

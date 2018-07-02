@@ -1,7 +1,13 @@
 {
-    "extends": "airbnb",
-    "rules": {
-      "func-names": ["error", "never"],
-      "no-console": "off"
-    }
+  "extends": "airbnb",
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "no-console": "off"
+  },
+  "env": {
+    "jasmine": true
   }
+}
