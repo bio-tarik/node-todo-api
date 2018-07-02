@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/bio-tarik/node-todo-api#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "mongodb": "^3.0.10",
     "mongoose": "^5.1.7"
   },
