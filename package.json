@@ -7,7 +7,9 @@
     "pretest": "npm run check",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'",
-    "check": "./node_modules/.bin/eslint ./**.js ."
+    "check": "./node_modules/.bin/eslint ./**.js .",
+    "start": "node server/server.js",
+    "start-watch": "nodemon --exec 'npm start'"
   },
   "repository": {
     "type": "git",
