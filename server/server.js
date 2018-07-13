@@ -10,6 +10,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+const port = process.env.PORT || 3000;
+
 app.post('/todos', (req, res) => {
   const todo = new Todo({
     text: req.body.text,
@@ -49,8 +51,8 @@ app.get('/todos/:id', (req, res) => {
   return null;
 });
 
-app.listen(3000, () => {
-  console.log('Server up and runnig on port 3000');
+app.listen(port, () => {
+  console.log(`Server up and runnig on port ${port}`);
 });
 
 module.exports = { app };
