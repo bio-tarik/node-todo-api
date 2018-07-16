@@ -50,7 +50,6 @@ app.get('/todos/:id', (req, res) => {
 
 app.delete('/todos/:id', (req, res) => {
   const { id } = req.params;
-
   if (!ObjectID.isValid(id)) {
     return res.status(404).send();
   }
@@ -72,6 +71,7 @@ app.patch('/todos/:id', (req, res) => {
   if (!ObjectID.isValid(id)) {
     return res.status(404).send();
   }
+
   if (_.isBoolean(body.completed) && body.completed) {
     body.completedAt = new Date().getTime();
   } else {
@@ -90,7 +90,7 @@ app.patch('/todos/:id', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server up and runnig on port ${port}`);
+  console.log(`Server up and running on port ${port}`);
 });
 
 module.exports = { app };
