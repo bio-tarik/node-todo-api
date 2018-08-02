@@ -6,6 +6,7 @@ const { ObjectID } = require('mongodb');
 const _ = require('lodash');
 
 const { Todo } = require('./models/todo');
+const { User } = require('./models/user');
 
 const app = express();
 
@@ -89,6 +90,16 @@ app.patch('/todos/:id', (req, res) => {
 
       res.send({ todo });
     }).catch(e => res.status(400).send(e.message));
+});
+
+app.post('/users', (req, res) => {
+  const body = _.pick(req.body, ['email', 'password']);
+  const newUser = new User(body);
+
+  newUser.save()
+    .then((user) => {
+      res.send(user);
+    }).catch(e => res.status(400).send(e));
 });
 
 app.listen(port, () => {
